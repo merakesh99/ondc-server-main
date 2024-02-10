@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <title>ধরিত্রীকা</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+   </head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="index.html"></a>
+        <img src="img/u1.png">
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><button class="btn">
+          <div class="wrapper">
+              <p class="text">Sign in </p>
+
+              <div class="flower flower1">
+                  <div class="petal one"></div>
+                  <div class="petal two"></div>
+                  <div class="petal three"></div>
+                  <div class="petal four"></div>
+              </div>
+              <div class="flower flower2">
+                  <div class="petal one"></div>
+                  <div class="petal two"></div>
+                  <div class="petal three"></div>
+                  <div class="petal four"></div>
+              </div>
+              <div class="flower flower3">
+                  <div class="petal one"></div>
+                  <div class="petal two"></div>
+                  <div class="petal three"></div>
+                  <div class="petal four"></div>
+              </div>
+              <div class="flower flower4">
+                  <div class="petal one"></div>
+                  <div class="petal two"></div>
+                  <div class="petal three"></div>
+                  <div class="petal four"></div>
+              </div>
+              <div class="flower flower5">
+                  <div class="petal one"></div>
+                  <div class="petal two"></div>
+                  <div class="petal three"></div>
+                  <div class="petal four"></div>
+              </div>
+              <div class="flower flower6">
+                  <div class="petal one"></div>
+                  <div class="petal two"></div>
+                  <div class="petal three"></div>
+                  <div class="petal four"></div>
+              </div>
+          </div>
+      </button></li>
+        <li><button class="button"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+          </svg>
+          Unlock Pro
+        </button></li>
+      </ul>
+    </div>
+  </nav>
+  <style>
+  /* Google Font Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+.body{
+    scroll-behavior: smooth;
+}
+section{
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  transition: all 0.4s ease;
+}
+nav.sticky{
+  padding: 10px 20px;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
+  background: #f8f8f8;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0) 0px 10px 20px, rgb(93, 255, 180) 0px 6px 6px;
+}
+nav .nav-content{
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .logo{
+  margin-top: -10px;
+}
+nav .logo img{
+  width: 120px;
+  padding: 0;
+  margin: 0;
+}
+nav .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  padding-top:10px ;
+  background: -webkit-linear-gradient( #000000, #00a181);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+nav.sticky .logo a{
+  color: #fff;
+}
+.nav-content .nav-links{
+  display: flex;
+}
+.nav-content .nav-links li{
+  list-style: none;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+ .nav-links li a{
+  text-decoration: none;
+  color: #0E2431;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px 4px;
+  transition: all 0.3s ease;
+}
+ .nav-links li a:hover{
+   color: #0f9444;
+ }
+ nav.sticky .nav-links li a{
+   transition: all 0.4s ease;
+}
+ nav.sticky .nav-links li a:hover{
+  color: #4070f4;
+}
+.button {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  margin-top: -10px;
+  padding: 0.8em 1.1em;
+  gap: 0.4rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+  background: linear-gradient(15deg, #880088, #aa2068, #cc3f47, #de6f3d, #f09f33, #de6f3d, #cc3f47, #aa2068, #880088) no-repeat;
+  background-size: 300%;
+  background-position: left center;
+  transition: background .3s ease;
+  color: #fff;
+}
+
+.button:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+.button:focus{
+  outline: transparent !important;
+}
+.button:hover svg {
+  fill: #fff;
+}
+
+.button svg {
+  width: 23px;
+  fill: #f09f33;
+  transition: .3s ease;
+}
+.btn {
+  cursor: pointer;
+  height: 4em;
+  width: 12em;
+  margin-top: -15px;
+  outline:transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0px solid black;
+}
+.wrapper {
+  height: 2em;
+  width: 8em;
+  position: relative;
+  outline:none;
+  border: none;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  font-size: 20px;
+  font-weight: 500;
+  z-index: 1;
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: all 0.5s ease;
+}
+
+.flower {
+  display: grid;
+  grid-template-columns: 1em 1em;
+  position: absolute;
+  transition: grid-template-columns 0.8s ease;
+}
+
+.flower1 {
+  top: -12px;
+  left: -13px;
+  transform: rotate(5deg);
+}
+
+.flower2 {
+  bottom: -5px;
+  left: 8px;
+  transform: rotate(35deg);
+}
+
+.flower3 {
+  bottom: -15px;
+  transform: rotate(0deg);
+}
+
+.flower4 {
+  top: -14px;
+  transform: rotate(15deg);
+}
+
+.flower5 {
+  right: 11px;
+  top: -3px;
+  transform: rotate(25deg);
+}
+
+.flower6 {
+  right: -15px;
+  bottom: -15px;
+  transform: rotate(30deg);
+}
+
+.petal {
+  height: 1em;
+  width: 1em;
+  border-radius: 40% 70% / 7% 90%;
+  background: linear-gradient(#07a6d7, #93e0ee);
+  border: 0.5px solid #96d1ec;
+  z-index: 0;
+  transition: width 0.8s ease, height 0.8s ease;
+}
+
+.two {
+  transform: rotate(90deg);
+}
+
+.three {
+  transform: rotate(270deg);
+}
+
+.four {
+  transform: rotate(180deg);
+}
+
+.btn:hover .petal {
+  background: linear-gradient(#0761d7, #93bdee);
+  border: 0.5px solid #96b4ec;
+}
+
+.btn:hover .flower {
+  grid-template-columns: 1.5em 1.5em;
+}
+
+.btn:hover .flower .petal {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.btn:hover .text {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.btn:hover div.flower1 {
+  animation: 15s linear 0s normal none infinite running flower1;
+}
+
+@keyframes flower1 {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(365deg);
+  }
+}
+
+.btn:hover div.flower2 {
+  animation: 13s linear 1s normal none infinite running flower2;
+}
+
+@keyframes flower2 {
+  0% {
+    transform: rotate(35deg);
+  }
+
+  100% {
+    transform: rotate(-325deg);
+  }
+}
+
+.btn:hover div.flower3 {
+  animation: 16s linear 1s normal none infinite running flower3;
+}
+
+@keyframes flower3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn:hover div.flower4 {
+  animation: 17s linear 1s normal none infinite running flower4;
+}
+
+@keyframes flower4 {
+  0% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(375deg);
+  }
+}
+
+.btn:hover div.flower5 {
+  animation: 20s linear 1s normal none infinite running flower5;
+}
+
+@keyframes flower5 {
+  0% {
+    transform: rotate(25deg);
+  }
+
+  100% {
+    transform: rotate(-335deg);
+  }
+}
+
+.btn:hover div.flower6 {
+  animation: 15s linear 1s normal none infinite running flower6;
+}
+
+@keyframes flower6 {
+  0% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(390deg);
+  }
+}
+.home{
+  height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+}
+.home img{
+  height: 65%;
+  position: absolute;
+  right: 0px;
+  top: 160px
+}
+.home .center-text{
+position: relative;
+top: 35%;
+}
+.home .center-text p{
+transform: translate(15%);
+margin-bottom: 20px;
+font-size: 95px;
+font-weight: 900;
+background: -webkit-linear-gradient( #000000, #00a181);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.home .center-text p img{
+  width: 150px;
+}
+.home .desc span{
+    font-size: 20px;
+    background: -webkit-linear-gradient( #000, #a4b1d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.desc{
+    position: relative;
+    transform: translate(20%);
+    padding: 35px;
+    width: 600px;
+    border-radius: 50% 20% / 10% 40%;
+    box-shadow: rgba(4, 3, 3, 0.11) 0px 2px 4px 0px, rgba(4, 3, 3, 0.078) 0px 2px 16px 0px;
+}
+
+.heading{
+    font-size: 40px;
+    font-weight: 600;
+    display: grid;
+  place-items: center;
+}
+.sec2 .sub-heading{
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.sub-heading p{
+  font-size: 20px;
+  font-weight: 400;
+  color:#00a181;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+:root {
+  --surface-color: #fff;
+  --curve: 30;
+}
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border: transparent !important;
+  border-radius: calc(var(--curve) * 3px);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.card__image {
+  width: 100%;
+  height: auto;
+  transition: 0.2s all;
+  transform: translateY(-5%);
+}
+ .card__title {
+  transform: translateY(15%);
+  transition:  0.2s all;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.card:hover .card__title {
+  transform: translateY(-35%);
+}
+.card:hover .card__image{
+  transform: translateY(5%);
+}
+.info-container{
+  display: flex;
+  position: relative;
+  left:5%;
+  top:5%;
+}
+.card-client {
+  background: #2cb5a0;
+  width: 13rem;
+  padding-top: 20px;
+  margin: 35px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 4px solid #7cdacc;
+  box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.card-client:hover {
+  transform: translateY(-10px);
+}
+
+.user-picture {
+  overflow: hidden;
+  object-fit: cover;
+  width: 5rem;
+  height: 5rem;
+  border: 4px solid #7cdacc;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.user-picture img {
+  width: 5rem;
+  height: 5rem;
+  fill: currentColor;
+}
+
+.name-client {
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.social-media:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #7cdacc;
+}
+
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.1rem;
+  fill: currentColor;
+}
+
+
+/*-- Tooltip Social Media --*/
+.tooltip-social {
+  background: #262626;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.tooltip-social:after {
+  content: " ";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+  border-top-color: #262626;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+.sec2{
+  overflow: hidden;
+}
+.advertise{
+  margin-top: 50px;
+  background-position: center;
+  display: flex;
+  justify-content: space-evenly;
+ align-items: center;
+  background-size: cover;
+
+}
+.advertise .cardx {
+  max-width: 350px;
+  background-color: rgb(7 16 45);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  border: transparent;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.advertise .small-text, .title,.descx {
+  font-weight: 600;
+}
+
+.advertise .title,.descx {
+  margin: 8px 0;
+}
+
+.advertise .small-text {
+  color: #488aec;
+  font-size: 14px;
+}
+
+.advertise .title {
+  color: #4BB543;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.advertise .descx {
+  color: rgb(151 153 167);
+  font-size: 13px;
+}
+
+.advertise .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.advertise .buttonx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.advertise .buttonx:first-child {
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  background-color: #488aec;
+}
+
+.advertise .buttonx:last-child {
+  box-shadow: 0 4px 6px -1px #0b162531, 0 2px 4px -1px #0e192b17;
+  background-color: #fff;
+}
+
+.advertise .icon {
+  height: 25px;
+  width: 25px;
+}
+
+.advertise .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.advertise .icon svg:last-child {
+  fill: #000
+}
+
+.advertise .button-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+.advertise .button-text span:first-child {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.advertise .google span:first-child {
+  color: rgb(219 206 253);
+}
+
+.advertise .apple span:first-child {
+  color: rgb(81 87 108);
+}
+
+.advertise .google span:last-child {
+  color: #fff;
+  font-weight: 800;
+}
+
+.advertise .apple span:last-child {
+  color: #000;
+  font-weight: 800;
+}
+.contact{
+  display: flex;
+}
+.contact .img{
+  position: relative;
+  top: 5%;
+  left: 10%;
+  height:550px;
+}
+.card1 {
+  position: relative;
+  left:15%;
+  top: 15%;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 10px;
+  padding: 30px;
+  width: 550px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  position: relative;
+}
+
+.form .group label {
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  transition: all .3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #00a181;
+}
+
+.form .group input:focus+ label, .form .group textarea:focus +label {
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #00a181;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #00a181;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #0f9444;
+}
+
+
+.footer {
+  position: relative;
+  background: #05b3a4;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+.menu__link:hover{
+	color: white;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.imgur.com/ZAts69f.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+.form-container {
+	height: 100vh;
+	display: flex;
+   	justify-content: center;
+	align-items: center;
+}
+.upload-files-container {
+	background-color: #fff;
+	width: 420px;
+	padding: 30px 60px;
+	border-radius: 40px;
+	display: flex;
+   	align-items: center;
+   	justify-content: center;
+	flex-direction: column;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.drag-file-area {
+	border: 2px dashed #7b2cbf;
+	border-radius: 40px;
+	margin: 10px 0 15px;
+	padding: 30px 50px;
+	width: 350px;
+	text-align: center;
+}
+.drag-file-area .upload-icon {
+	font-size: 50px;
+}
+.drag-file-area h3 {
+	font-size: 26px;
+	margin: 15px 0;
+}
+.drag-file-area label {
+	font-size: 19px;
+  margin-left: -60px;
+}
+.drag-file-area label .browse-files-text {
+	color: #7b2cbf;
+  font-family: inherit;
+	font-weight: bolder;
+	cursor: pointer;
+}
+.browse-files span {
+	position: relative;
+  font-family: inherit;
+	top: -25px;
+}
+.default-file-input {
+	opacity: 0;
+}
+.cannot-upload-message {
+	background-color: #ffc6c4;
+	font-size: 17px;
+	display: flex;
+  font-family: inherit;
+	align-items: center;
+	margin: 5px 0;
+	padding: 5px 10px 5px 30px;
+	border-radius: 5px;
+	color: #BB0000;
+	display: none;
+}
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.cannot-upload-message span, .upload-button-icon {
+	padding-right: 10px;
+}
+.cannot-upload-message span:last-child {
+	padding-left: 20px;
+	cursor: pointer;
+}
+.file-block {
+	color: #f7fff7;
+	background-color: #7b2cbf;
+  	transition: all 1s;
+	width: 390px;
+	position: relative;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 15px;
+	padding: 10px 20px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.file-info {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+.file-icon {
+	margin-right: 10px;
+}
+.file-name, .file-size {
+	padding: 0 3px;
+}
+.remove-file-icon {
+	cursor: pointer;
+}
+.progress-bar {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 4.5%;
+	width: 0;
+	height: 5px;
+	border-radius: 25px;
+	background-color: #4BB543;
+}
+.upload-button {
+  font-family: inherit;
+	background-color: #7b2cbf;
+	color: #f7fff7;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 7.5px 50px;
+	cursor: pointer;
+}
+.result-button {
+  font-family: inherit;
+	background-color: #7b2cbf;
+	color: #f7fff7;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 7.5px 50px;
+	cursor: pointer;
+}
+
+
+.output{
+  position: relative;
+  width: 40px;
+  padding-top: 10px;
+  height: 40px;
+  margin-left: 50%;
+  font-family: cursive;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6441A5;
+  text-align: center;
+   background: #F5F9FF;
+  border: 2px solid #6441A5;
+  border-radius: 50% 50% 50% 0%;
+  -webkit-transition: opacity .3s ease-in-out 0s;
+  transition: opacity .3s ease-in-out 0s;
+}
+.range{
+  --active: #5628EE;
+  --value: #fff;
+  --line: #CDD9ED;
+  touch-action: none;
+ -webkit-appearance: none;
+  appearance: none;
+  user-select: none;
+  width: 320px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--line);
+  position: relative;
+
+  &::-webkit-slider-thumb{
+   -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #F5F9FF;
+    border: 2px solid #6441A5;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: .5s ease;
+
+    &:focus , &:active{
+      padding: 8px;
+    }
+}
+
+
+&:focus , &:active{
+  outline: none;
+}
+}
+
+.modal-header .modal-title a{
+  font-weight: 500;
+  font-size: 35px;
+  padding-top:10px ;
+  background: -webkit-linear-gradient( #000000, #00a181);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+    video:hover::-webkit-media-controls {
+     display: none !important;
+   }
+
+   video::-webkit-media-controls {
+     display: none !important;
+   }
+ </style>
+      <!-- <div class="heading" style="margin-top: 90px;"><img src="img/u3.png" style="height: 26px">
+        Pest Detection
+        <img src="img/u2.png" style="height: 30px"></div>
+  <div class="advertise2">   -->
+  <style>
+    .form-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .slider{
+        display: flex;
+        flex-direction: column;
+    }
+    .slider label{
+      margin-left: -30px;
+      margin-top: 5px;
+    }
+  </style>
+  <div class="section">
+    <form class="form-container" id="predictionForm" method="post" action="/predict" enctype='multipart/form-data'>
+      <div class="upload-files-container">
+        <div class="drag-file-area">
+          <span class="material-icons-outlined upload-icon"> file_upload </span>
+          <h3 class="dynamic-message"> Drag & drop any file here </h3>
+          <label class="label"> or <span class="browse-files">
+              <input type="file" id="image" name="image" class="default-file-input" accept="image/*"/>
+ <span class="browse-files-text">browse file</span> <span>from device</span> </span> </label>
+        </div>
+        <span class="cannot-upload-message"> <span class="material-icons-outlined">error</span> Please select a file first <span class="material-icons-outlined cancel-alert-button">cancel</span> </span>
+        <div class="file-block">
+          <div class="file-info"> <span class="material-icons-outlined file-icon">description</span> <span class="file-name"> </span> | <span class="file-size">  </span> </div>
+          <span class="material-icons remove-file-icon">delete</span>
+          <div class="progress-bar"> </div>
+        </div>
+<button type="submit" class="upload-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Upload</button>
+
+      </div>
+    </form>
+      </div>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel"><a href="#">ধরিত্রীকা</a></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+           <div class="modal-body">
+                <div id="preloader" style="display: none;">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+                <div id="modalContent"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+<script>
+    let uploadButton = document.querySelector(".upload-button");
+
+    uploadButton.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        let formData = new FormData(document.getElementById('predictionForm'));
+        let preloader = document.getElementById('preloader');
+        let modalContent = document.getElementById('modalContent');
+
+        // Show the preloader
+        preloader.style.display = 'block';
+
+        fetch('/predict', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Update the modal content with the new data
+            modalContent.innerHTML = ""; // Clear existing content
+            for (let text of data.prediction) {
+                let paragraph = document.createElement("p");
+                paragraph.textContent = text;
+                modalContent.appendChild(paragraph);
+            }
+
+            // Hide the preloader
+            preloader.style.display = 'none';
+
+            // Show the modal
+            let modal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+            modal.show();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            // Hide the preloader in case of an error
+            preloader.style.display = 'none';
+        });
+    });
+</script>
+
+<!--      <script>-->
+<!--        var isAdvancedUpload = function() {-->
+<!--      var div = document.createElement('div');-->
+<!--      return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;-->
+<!--    }();-->
+
+<!--    let draggableFileArea = document.querySelector(".drag-file-area");-->
+<!--    let browseFileText = document.querySelector(".browse-files");-->
+<!--    let uploadIcon = document.querySelector(".upload-icon");-->
+<!--    let dragDropText = document.querySelector(".dynamic-message");-->
+<!--    let fileInput = document.querySelector(".default-file-input");-->
+<!--    let cannotUploadMessage = document.querySelector(".cannot-upload-message");-->
+<!--    let cancelAlertButton = document.querySelector(".cancel-alert-button");-->
+<!--    let uploadedFile = document.querySelector(".file-block");-->
+<!--    let fileName = document.querySelector(".file-name");-->
+<!--    let fileSize = document.querySelector(".file-size");-->
+<!--    let progressBar = document.querySelector(".progress-bar");-->
+<!--    let removeFileButton = document.querySelector(".remove-file-icon");-->
+<!--    let uploadButton = document.querySelector(".upload-button");-->
+<!--    let fileFlag = 0;-->
+
+<!--    fileInput.addEventListener("click", () => {-->
+<!--      fileInput.value = '';-->
+<!--      console.log(fileInput.value);-->
+<!--    });-->
+
+<!--    fileInput.addEventListener("change", e => {-->
+<!--      console.log(" > " + fileInput.value)-->
+<!--      uploadIcon.innerHTML = 'check_circle';-->
+<!--      dragDropText.innerHTML = 'File Dropped Successfully!';-->
+<!--      document.querySelector(".label").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: 0;"> browse file</span></span>`;-->
+<!--      uploadButton.innerHTML = `Upload`;-->
+<!--      fileName.innerHTML = fileInput.files[0].name;-->
+<!--      fileSize.innerHTML = (fileInput.files[0].size/1024).toFixed(1) + " KB";-->
+<!--      uploadedFile.style.cssText = "display: flex;";-->
+<!--      progressBar.style.width = 0;-->
+<!--      fileFlag = 0;-->
+<!--    });-->
+
+<!--    uploadButton.addEventListener("click", () => {-->
+<!--      let isFileUploaded = fileInput.value;-->
+<!--      if(isFileUploaded != '') {-->
+<!--        if (fileFlag == 0) {-->
+<!--            fileFlag = 1;-->
+<!--            var width = 0;-->
+<!--            var id = setInterval(frame, 50);-->
+<!--            function frame() {-->
+<!--                if (width >= 390) {-->
+<!--                  clearInterval(id);-->
+<!--              uploadButton.innerHTML = `<span class="material-icons-outlined upload-button-icon"> check_circle </span> Uploaded`;-->
+<!--                } else {-->
+<!--                  width += 5;-->
+<!--                  progressBar.style.width = width + "px";-->
+<!--                }-->
+<!--            }-->
+<!--          }-->
+<!--      } else {-->
+<!--        cannotUploadMessage.style.cssText = "display: flex; animation: fadeIn linear 1.5s;";-->
+<!--      }-->
+<!--    });-->
+
+<!--    cancelAlertButton.addEventListener("click", () => {-->
+<!--      cannotUploadMessage.style.cssText = "display: none;";-->
+<!--    });-->
+
+<!--    if(isAdvancedUpload) {-->
+<!--      ["drag", "dragstart", "dragend", "dragover", "dragenter", "dragleave", "drop"].forEach( evt =>-->
+<!--        draggableFileArea.addEventListener(evt, e => {-->
+<!--          e.preventDefault();-->
+<!--          e.stopPropagation();-->
+<!--        })-->
+<!--      );-->
+
+<!--      ["dragover", "dragenter"].forEach( evt => {-->
+<!--        draggableFileArea.addEventListener(evt, e => {-->
+<!--          e.preventDefault();-->
+<!--          e.stopPropagation();-->
+<!--          uploadIcon.innerHTML = 'file_download';-->
+<!--          dragDropText.innerHTML = 'Drop your file here!';-->
+<!--        });-->
+<!--      });-->
+
+<!--      draggableFileArea.addEventListener("drop", e => {-->
+<!--        uploadIcon.innerHTML = 'check_circle';-->
+<!--        dragDropText.innerHTML = 'File Dropped Successfully!';-->
+<!--        document.querySelector(".label").innerHTML = `drag & drop or <span class="browse-files"> <input type="file" class="default-file-input" style=""/> <span class="browse-files-text" style="top: -23px; left: -20px;"> browse file</span> </span>`;-->
+<!--        uploadButton.innerHTML = `Upload`;-->
+
+<!--        let files = e.dataTransfer.files;-->
+<!--        fileInput.files = files;-->
+<!--        console.log(files[0].name + " " + files[0].size);-->
+<!--        console.log(document.querySelector(".default-file-input").value);-->
+<!--        fileName.innerHTML = files[0].name;-->
+<!--        fileSize.innerHTML = (files[0].size/1024).toFixed(1) + " KB";-->
+<!--        uploadedFile.style.cssText = "display: flex;";-->
+<!--        progressBar.style.width = 0;-->
+<!--        fileFlag = 0;-->
+<!--      });-->
+<!--    }-->
+
+<!--    removeFileButton.addEventListener("click", () => {-->
+<!--      uploadedFile.style.cssText = "display: none;";-->
+<!--      fileInput.value = '';-->
+<!--      uploadIcon.innerHTML = 'file_upload';-->
+<!--      dragDropText.innerHTML = 'Drag & drop any file here';-->
+<!--      document.querySelector(".label").innerHTML = `or <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">browse file</span> <span>from device</span> </span>`;-->
+<!--      uploadButton.innerHTML = `Upload`;-->
+<!--    });-->
+<!--      </script>-->
+  </body>
+  </html>
